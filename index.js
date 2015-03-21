@@ -12,7 +12,7 @@ function wkhtmltopdf(input, options, callback) {
   var output = options.output;
   delete options.output;
   
-  var args = [wkhtmltopdf.command, '--quiet'];
+  var args = [wkhtmltopdf.command];
   for (var key in options) {
     var val = options[key];
     key = key.length === 1 ? '-' + key : '--' + slang.dasherize(key);
